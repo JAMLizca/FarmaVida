@@ -1,4 +1,6 @@
-/* ══════════════════════════════ RESPONSIVE ══════════════════════════════ */
+/* RESPONSIVE SOLO UNA PARTE, MOREA LA OTRA PARTE ESTA 
+EN EL ARCHIVO STYLE.CSS*/
+
 @media (max-width: 1200px) {
   .servicios-grid {
     grid-template-columns: repeat(2, 1fr);

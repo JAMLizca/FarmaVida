@@ -1,4 +1,4 @@
-/* ══════════════════════════════ INFO SECTION (Horarios/Contacto) ══════════════════════════════ */
+/* INFO SECTION (Horarios/Contacto) */
 .info-section {
   padding: 0 60px 110px;
   background: var(--crema);
@@ -33,7 +33,7 @@
   color: #1e3a8a;
 }
 
-/* GRID 2×2 SIMÉTRICO - AHORA CONTIENE LOS 4 PANELES */
+/* GRID 2×2 SIMÉTRICO */
 .info-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -41,7 +41,7 @@
   align-items: stretch;
 }
 
-/* Hacemos que el wrapper .info-stack sea transparente al grid */
+/* Hacemos que el wrapper .info-stack sea tansparente al grid */
 .info-stack {
   display: grid;
   grid-template-columns: 1fr;
@@ -63,7 +63,7 @@
   box-sizing: border-box;
 }
 
-/* ── HORARIO PANEL ── */
+/* HORARIO PANEL */
 .horario-panel {
   background: var(--azul-noche);
   border: 1px solid var(--panel-borde2);
@@ -159,7 +159,7 @@
   line-height: 1.4;
 }
 
-/* ── CONTACTO CARD ── */
+/* CONTACTO CARD */
 .contacto-card {
   background: var(--azul-noche);
   border: 1px solid var(--panel-borde2);
@@ -268,7 +268,7 @@
   box-shadow: var(--shadow-blue);
 }
 
-/* ── FORMULARIO CARD ── */
+/* FORMULARIO CARD */
 .formulario-card {
   background: var(--blanco);
   border: 1px solid rgba(11, 29, 58, 0.08);
@@ -373,7 +373,6 @@
   box-shadow: var(--shadow-card);
 }
 
-/* Botón real para Google Maps (reemplaza el ::after que no existe en tu HTML) */
 .mapa-link {
   position: absolute;
   top: 28px;
