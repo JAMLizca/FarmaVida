@@ -1,0 +1,128 @@
+/* ══════════════════════════════ RESPONSIVE ══════════════════════════════ */
+@media (max-width: 1200px) {
+  .servicios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .productos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 160px 30px 80px;
+    gap: 48px;
+    text-align: center;
+  }
+  
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-btns {
+    justify-content: center;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 24px;
+  }
+  
+  .servicios-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  
+  .productos {
+    padding-bottom: 0;
+  }
+  
+  .btn-add {
+    min-width: 90px;
+    height: 38px;
+    padding: 0 16px;
+    font-size: 0.8rem;
+  }
+  
+  .cta-banner {
+    margin: 80px 24px 60px;
+    padding: 44px 32px;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .cta-banner p {
+    max-width: 100%;
+  }
+  
+  .info-section {
+    padding: 0 24px 60px;
+  }
+  
+  .horario-panel,
+  .contacto-card,
+  .formulario-card,
+  .mapa-panel {
+    padding: 24px 20px;
+  }
+  
+  .horario-item {
+    padding: 8px 12px;
+  }
+  
+  .dia {
+    font-size: 0.78rem;
+  }
+  
+  .hora {
+    font-size: 0.85rem;
+  }
+  
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  
+  .footer-cta {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .productos {
+    padding-bottom: 50px;
+  }
+  
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+  
+  .trust-bar {
+    gap: 24px;
+    padding: 16px 24px;
+  }
+}

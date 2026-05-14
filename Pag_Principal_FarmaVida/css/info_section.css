@@ -1,0 +1,511 @@
+/* ══════════════════════════════ INFO SECTION (Horarios/Contacto) ══════════════════════════════ */
+.info-section {
+  padding: 0 60px 110px;
+  background: var(--crema);
+}
+
+.info-heading {
+  margin-bottom: 56px;
+  text-align: center;
+}
+
+.info-heading .section-sub {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+}
+
+.info-pill {
+  display: inline-block;
+  font-size: .65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--blanco);
+  background: linear-gradient(135deg, var(--azul-vivo), var(--azul-cielo));
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.info-pill.abierto {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  color: #1e3a8a;
+}
+
+/* GRID 2×2 SIMÉTRICO - AHORA CONTIENE LOS 4 PANELES */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  align-items: stretch;
+}
+
+/* Hacemos que el wrapper .info-stack sea transparente al grid */
+.info-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+/* Base común de tarjetas */
+.horario-panel,
+.contacto-card,
+.formulario-card,
+.mapa-panel {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-xl);
+  padding: 28px 32px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ── HORARIO PANEL ── */
+.horario-panel {
+  background: var(--azul-noche);
+  border: 1px solid var(--panel-borde2);
+  box-shadow: var(--shadow-med);
+  display: flex;
+  flex-direction: column;
+}
+
+.horario-panel .info-pill.abierto {
+  background: rgba(37, 99, 235, 0.15);
+  color: var(--azul-claro);
+  margin-bottom: 16px;
+}
+
+.horario-panel h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--blanco);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.horario-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.horario-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: var(--panel);
+  border: 1px solid transparent;
+  transition: all var(--transition);
+  margin-bottom: 0;
+}
+
+.horario-item:hover {
+  background: var(--panel-2);
+  border-color: var(--panel-borde);
+}
+
+.horario-item.destacado {
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.horario-item.urgencias {
+  background: rgba(220, 60, 60, 0.08);
+  border: 1px solid rgba(220, 60, 60, 0.2);
+}
+
+.dia {
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hora {
+  font-family: 'Fraunces', serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--azul-claro);
+}
+
+.horario-item.urgencias .dia {
+  color: #fecaca;
+}
+
+.horario-item.urgencias .hora {
+  color: #f87171;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8rem;
+}
+
+.horario-note {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 14px;
+  padding-left: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.4;
+}
+
+/* ── CONTACTO CARD ── */
+.contacto-card {
+  background: var(--azul-noche);
+  border: 1px solid var(--panel-borde2);
+  box-shadow: var(--shadow-med);
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto-card .info-pill {
+  background: rgba(96, 165, 250, 0.12);
+  color: var(--azul-claro);
+  margin-bottom: 16px;
+}
+
+.contacto-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--blanco);
+  margin-bottom: 20px;
+}
+
+.contacto-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--panel-borde);
+  transition: all var(--transition);
+}
+
+.contacto-item:last-child {
+  border-bottom: none;
+}
+
+.contacto-item:hover {
+  padding-left: 5px;
+}
+
+.ci-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(96, 165, 250, 0.22);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.contacto-item:hover .ci-icon {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-blue);
+}
+
+.ci-icon svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--azul-claro) !important;
+  stroke-width: 2;
+}
+
+.ci-text strong {
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 3px;
+}
+
+.ci-text,
+.ci-text a {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.ci-text a:hover {
+  color: var(--azul-claro);
+}
+
+.contacto-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(135deg, var(--azul-vivo), var(--azul-cielo));
+  color: var(--blanco);
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-top: 16px;
+  transition: transform var(--transition), box-shadow var(--transition);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.contacto-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-blue);
+}
+
+/* ── FORMULARIO CARD ── */
+.formulario-card {
+  background: var(--blanco);
+  border: 1px solid rgba(11, 29, 58, 0.08);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-card .info-pill {
+  margin-bottom: 16px;
+}
+
+.formulario-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--texto);
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-row label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--texto);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.form-row input,
+.form-row textarea {
+  padding: 10px 14px;
+  border: 1.5px solid rgba(11, 29, 58, 0.12);
+  border-radius: 12px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  color: var(--texto);
+  background: var(--gris-bg);
+  transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+  outline: none;
+  resize: vertical;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  border-color: var(--azul-vivo);
+  background: var(--blanco);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+  color: #9badbf;
+  font-weight: 300;
+}
+
+.form-row textarea {
+  min-height: 100px;
+}
+
+.form-btn {
+  background: linear-gradient(135deg, var(--azul-marino), var(--azul-vivo));
+  color: var(--blanco);
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border: none;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+  margin-top: 4px;
+}
+
+.form-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-blue);
+}
+
+/* ── MAPA PANEL ── */
+.mapa-panel {
+  background: var(--blanco);
+  border: 1px solid rgba(11, 29, 58, 0.08);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.mapa-panel:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card);
+}
+
+/* Botón real para Google Maps (reemplaza el ::after que no existe en tu HTML) */
+.mapa-link {
+  position: absolute;
+  top: 28px;
+  right: 32px;
+  background: rgba(11, 29, 58, 0.9);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--azul-claro);
+  box-shadow: var(--shadow-soft);
+  z-index: 10;
+  text-decoration: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: 0.2px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.mapa-link:hover,
+.mapa-link:focus {
+  background: var(--azul-vivo);
+  color: var(--blanco);
+}
+
+.mapa-link:focus-visible {
+  outline: 2px solid var(--azul-claro);
+  outline-offset: 2px;
+}
+
+.mapa-panel .info-pill {
+  margin-bottom: 16px;
+}
+
+.mapa-panel h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--texto);
+  margin-bottom: 16px;
+}
+
+.mapa-frame {
+  width: 100%;
+  min-height: 0;
+  flex: 1;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1.5px solid rgba(11, 29, 58, 0.09);
+}
+
+.mapa-frame iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  border: none;
+  filter: grayscale(0.2) contrast(1.05);
+  transition: filter var(--transition);
+}
+
+.mapa-frame:hover iframe {
+  filter: grayscale(0) contrast(1);
+}
+
+.mapa-text {
+  font-size: 0.78rem;
+  color: var(--texto-2);
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .info-section {
+    padding: 0 32px 90px;
+  }
+
+  .info-grid {
+    gap: 28px;
+  }
+
+  .info-stack {
+    gap: 28px;
+  }
+
+  .horario-panel,
+  .contacto-card,
+  .formulario-card,
+  .mapa-panel {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-section {
+    padding: 0 20px 70px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .info-stack {
+    gap: 24px;
+  }
+
+  .mapa-link {
+    top: 20px;
+    right: 20px;
+    font-size: 0.65rem;
+    padding: 5px 12px;
+  }
+
+  .mapa-frame iframe {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mapa-link {
+    font-size: 0.6rem;
+    padding: 4px 10px;
+    top: 16px;
+    right: 16px;
+  }
+
+  .info-pill {
+    font-size: 0.6rem;
+    padding: 4px 10px;
+  }
+}

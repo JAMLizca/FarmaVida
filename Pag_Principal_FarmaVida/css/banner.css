@@ -1,0 +1,106 @@
+/* ══════════════════════════════ CTA BANNER ══════════════════════════════ */
+.cta-banner {
+  margin: 50px 60px 110px;
+  padding: 60px 68px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 44px;
+  background: linear-gradient(135deg, var(--azul-marino) 0%, var(--azul-medio) 60%, var(--azul-vivo) 100%);
+  border-radius: var(--radius-2xl);
+  box-shadow: 0 32px 80px rgba(11, 29, 58, 0.35), 0 0 0 1px rgba(96, 165, 250, 0.15);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cta-banner-btns {
+  display: flex;
+  gap: 14px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-banner-btns::before {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 160px;
+  height: 160px;
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cta-banner-btns::after {
+  content: '';
+  position: absolute;
+  bottom: -70px;
+  right: -70px;
+  width: 240px;
+  height: 240px;
+  border: 1px solid rgba(11, 29, 58, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cta-banner h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--blanco);
+  letter-spacing: -.5px;
+  margin-bottom: 14px;
+  line-height: 1.18;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-banner p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: .95rem;
+  line-height: 1.75;
+  max-width: 500px;
+  position: relative;
+  z-index: 2;
+  font-weight: 300;
+}
+
+.btn-white {
+  background: var(--blanco);
+  color: var(--azul-vivo);
+  padding: 14px 30px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: .88rem;
+  transition: all var(--transition);
+  white-space: nowrap;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+}
+
+.btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+}
+
+.btn-outline-white {
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  color: var(--blanco);
+  padding: 14px 30px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: .88rem;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}

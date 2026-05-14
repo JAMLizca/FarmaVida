@@ -1,0 +1,154 @@
+/* ══════════════════════════════ SERVICIOS ══════════════════════════════ */
+#servicios.section {
+  background: radial-gradient(ellipse 60% 50% at 90% 10%, rgba(37, 99, 235, 0.05) 0%, transparent 55%), var(--crema);
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.servicio-card {
+  background: var(--blanco);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(11, 29, 58, 0.07);
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.servicio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-card);
+}
+
+.servicio-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--azul-vivo), var(--azul-cielo));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .45s cubic-bezier(.4, 0, .2, 1);
+  z-index: 2;
+}
+
+.servicio-card:hover::after {
+  transform: scaleX(1);
+}
+
+.servicio-img {
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+}
+
+.servicio-img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(37, 99, 235, 0.2) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity .5s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.servicio-card:hover .servicio-img::before {
+  opacity: 1;
+}
+
+.servicio-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s cubic-bezier(.4, 0, .2, 1);
+  filter: saturate(.85) brightness(.96);
+}
+
+.servicio-card:hover .servicio-img img {
+  transform: scale(1.07);
+  filter: saturate(1.05);
+}
+
+.serv-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--azul-vivo), var(--azul-cielo));
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 22px 26px 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: var(--shadow-blue);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.serv-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--blanco) !important;
+  fill: var(--blanco) !important;
+}
+
+.servicio-card:hover .serv-icon {
+  transform: rotate(-6deg) scale(1.1);
+  box-shadow: 0 10px 28px rgba(37, 99, 235, .45);
+}
+
+.servicio-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--texto);
+  margin: 14px 26px 8px;
+  position: relative;
+  z-index: 1;
+  letter-spacing: -.2px;
+}
+
+.servicio-card p {
+  font-size: .85rem;
+  color: var(--texto-2);
+  line-height: 1.7;
+  margin: 0 26px 22px;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  font-weight: 300;
+}
+
+.serv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--azul-vivo);
+  background: rgba(37, 99, 235, 0.07);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  padding: 9px 18px;
+  border-radius: 999px;
+  transition: all var(--transition);
+  position: relative;
+  z-index: 1;
+  margin: 0 26px 26px;
+  align-self: flex-start;
+  letter-spacing: .2px;
+}
+
+.serv-btn:hover {
+  background: var(--azul-vivo);
+  color: var(--blanco);
+  border-color: transparent;
+  transform: translateX(4px);
+}
