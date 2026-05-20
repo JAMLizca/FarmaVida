@@ -60,6 +60,9 @@ para no estar envien y envie correcciones, vamos a trabajar con ramas en github.
 
 /*lo nuevo que aprendí*/
 html {
+
+  /* desplazamiento animado y suave en lugar de un salto instantáneo */
+  
   scroll-behavior: smooth;
 }
 
