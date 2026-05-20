@@ -62,7 +62,7 @@ para no estar envien y envie correcciones, vamos a trabajar con ramas en github.
 html {
 
   /* desplazamiento animado y suave en lugar de un salto instantáneo */
-  
+
   scroll-behavior: smooth;
 }
 
