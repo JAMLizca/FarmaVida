@@ -251,15 +251,4 @@
   transition: all var(--transition);
 }
 
-.social-btn:hover {
-  background: var(--azul-vivo);
-  color: var(--blanco);
-  border-color: var(--azul-vivo);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-blue);
-}
-
-.social-btn svg {
-  width: 17px;
-  height: 17px;
-}
+/*Faltan clases por css*/

@@ -1,7 +1,13 @@
+/*No cree una sola hoja de estilo porque son muchas lineas, las dividí por secciones, para que sean mas facil de entender y corregir
+si se llega a tener algún error, todas esas hojas estan conectadas en el index.html por medio de la etiqueta Link. 
+
+para no estar envien y envie correcciones, vamos a trabajar con ramas en github.
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Fraunces:ital,wght@0,600;0,700;1,600;1,700&display=swap');
 
 :root {
-  /* ── Paleta Azul Médico ── */
+
   --azul-noche: #0b1d3a;
   --azul-marino: #102b52;
   --azul-medio: #1a4a8a;
@@ -49,6 +55,8 @@
   box-sizing: border-box;
 }
 
+
+/*lo nuevo que aprendí*/
 html {
   scroll-behavior: smooth;
 }
@@ -132,7 +140,7 @@ ul {
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-/* LOGO */
+/* LOFO */
 .navbar-brand {
   display: flex;
   align-items: center;

@@ -1,5 +1,9 @@
 /* RESPONSIVE SOLO UNA PARTE, MOREA LA OTRA PARTE ESTA 
-EN EL ARCHIVO STYLE.CSS*/
+EN EL ARCHIVO STYLE.CSS
+
+Por ahora me falta corregir algo con las img, el foooter entre otras cosillas, le encargo que entienda como funciona el responsive osea los
+media queries. 
+*/
 
 @media (max-width: 1200px) {
   .servicios-grid {

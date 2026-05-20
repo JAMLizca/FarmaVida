@@ -28,7 +28,7 @@
   font-size: .78rem;
   font-weight: 500;
   color: var(--azul-claro);
-  letter-spacing: .3px;
+  letter-spacing: .3px; /*espacio carac.*/
   margin-bottom: 28px;
 }
 
@@ -149,7 +149,7 @@
 .float-badge-1 {
   top: 8%;
   left: -10%;
-  animation-delay: 0s;
+  animation-delay: 0s; /*importante*/
 }
 
 .float-badge-2 {

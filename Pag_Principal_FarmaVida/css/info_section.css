@@ -1,4 +1,4 @@
-/* INFO SECTION (Horarios/Contacto) */
+/* INFO SECTION (Horarios y Contacto) */
 .info-section {
   padding: 0 60px 110px;
   background: var(--crema);
@@ -41,7 +41,7 @@
   align-items: stretch;
 }
 
-/* Hacemos que el wrapper .info-stack sea tansparente al grid */
+/* Hacemos que el wrappper .info-stack sea tansparente al grid */
 .info-stack {
   display: grid;
   grid-template-columns: 1fr;
@@ -49,7 +49,7 @@
   align-items: stretch;
 }
 
-/* Base común de tarjetas */
+/* Base común de las tarjetas */
 .horario-panel,
 .contacto-card,
 .formulario-card,
@@ -358,7 +358,7 @@
   box-shadow: var(--shadow-blue);
 }
 
-/* ── MAPA PANEL ── */
+/* MAPA PANEL */
 .mapa-panel {
   background: var(--blanco);
   border: 1px solid rgba(11, 29, 58, 0.08);
@@ -447,7 +447,7 @@
   line-height: 1.4;
 }
 
-/* ── RESPONSIVE ── */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
   .info-section {
     padding: 0 32px 90px;
@@ -469,42 +469,7 @@
   }
 }
 
-@media (max-width: 768px) {
-  .info-section {
-    padding: 0 20px 70px;
-  }
 
-  .info-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
+/*falta dispo 768px y 480px*/
 
-  .info-stack {
-    gap: 24px;
-  }
-
-  .mapa-link {
-    top: 20px;
-    right: 20px;
-    font-size: 0.65rem;
-    padding: 5px 12px;
-  }
-
-  .mapa-frame iframe {
-    min-height: 220px;
-  }
-}
-
-@media (max-width: 480px) {
-  .mapa-link {
-    font-size: 0.6rem;
-    padding: 4px 10px;
-    top: 16px;
-    right: 16px;
-  }
-
-  .info-pill {
-    font-size: 0.6rem;
-    padding: 4px 10px;
-  }
-}
+ 

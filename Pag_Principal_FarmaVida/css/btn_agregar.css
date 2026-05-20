@@ -20,12 +20,11 @@
   justify-content: center;
   gap: 6px;
   position: relative;
-  overflow: hidden;
+  ovverflow: hidden;
   padding: 0 20px;
   letter-spacing: 0.3px;
   white-space: nowrap;
   outline: none;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .btn-add::before {
