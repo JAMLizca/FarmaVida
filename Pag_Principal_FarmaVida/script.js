@@ -145,3 +145,5 @@
                 }
             });
         });
+
+        // Hacer su html, css y js para el carro de compra eso no lo tiene la pag
